@@ -12,7 +12,6 @@
     { "name": "hm-notification-service", "group": "services" },
     { "name": "customer-portal", "group": "ui" },
     { "name": "admin-portal", "group": "ui" },
-    { "name": "terraform-infra", "group": "platform" },
-    { "name": "terraform-modules", "group": "platform" }
+    { "name": "terraform-infra", "group": "platform" }
   ]
 }

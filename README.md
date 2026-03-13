@@ -21,7 +21,6 @@ hm-workspace/
     admin-portal
   platform/
     terraform-infra
-    terraform-modules
   scripts/
     clone-all.sh
     start-local.sh
@@ -55,7 +54,6 @@ Owner: `hm-workspace`
 ### Platform
 
 - `https://github.com/hm-workspace/terraform-infra`
-- `https://github.com/hm-workspace/terraform-modules`
 
 ## Quick Start
 
