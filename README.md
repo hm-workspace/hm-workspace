@@ -26,6 +26,7 @@ hm-workspace/
     clone-all.sh
     start-local.sh
     build-all.sh
+  repos.json
   docker/
     docker-compose.yml
 ```
@@ -70,6 +71,9 @@ cd hm-workspace/scripts
 Defaults:
 - `GITHUB_OWNER=manojkumarmeda`
 - `GIT_PROTOCOL=https`
+- `REPOS_MANIFEST=../repos.json`
+
+`clone-all.sh` reads repo definitions from `repos.json`.
 
 Optional overrides:
 
@@ -84,6 +88,8 @@ cd hm-workspace/scripts
 ./build-all.sh
 ```
 
+`build-all.sh` reads service repos from `repos.json` (`group: services`).
+
 ### Start local docker stack
 
 ```bash
@@ -95,3 +101,4 @@ cd hm-workspace/scripts
 
 - Every repo has `.vscode/mcp.json` configured.
 - Current GitHub visibility is `public`; you can switch to `private` later from repository settings.
+- Scripts require `jq` to parse `repos.json`.

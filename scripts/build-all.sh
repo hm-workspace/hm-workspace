@@ -2,18 +2,19 @@
 set -euo pipefail
 
 ROOT="${1:-$(cd "$(dirname "$0")/.." && pwd)}"
+MANIFEST="${REPOS_MANIFEST:-$ROOT/repos.json}"
 
-services=(
-  "hm-api-gateway"
-  "hm-auth-service"
-  "hm-patient-service"
-  "hm-doctor-service"
-  "hm-appointment-service"
-  "hm-medical-records-service"
-  "hm-department-service"
-  "hm-staff-service"
-  "hm-notification-service"
-)
+if ! command -v jq >/dev/null 2>&1; then
+  echo "jq is required. Install jq and retry."
+  exit 1
+fi
+
+if [ ! -f "$MANIFEST" ]; then
+  echo "Manifest not found: $MANIFEST"
+  exit 1
+fi
+
+mapfile -t services < <(jq -r '.repositories[] | select(.group == "services") | .name' "$MANIFEST")
 
 for s in "${services[@]}"; do
   if [ -d "$ROOT/services/$s" ]; then

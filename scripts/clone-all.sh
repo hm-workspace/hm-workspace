@@ -1,26 +1,26 @@
 ﻿#!/usr/bin/env bash
 set -euo pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+MANIFEST="${REPOS_MANIFEST:-$SCRIPT_DIR/../repos.json}"
 ROOT="${1:-$HOME/hm-workspace}"
-OWNER="${GITHUB_OWNER:-manojkumarmeda}"
 PROTOCOL="${GIT_PROTOCOL:-https}"
+
+if ! command -v jq >/dev/null 2>&1; then
+  echo "jq is required. Install jq and retry."
+  exit 1
+fi
+
+if [ ! -f "$MANIFEST" ]; then
+  echo "Manifest not found: $MANIFEST"
+  exit 1
+fi
+
+OWNER="${GITHUB_OWNER:-$(jq -r '.owner' "$MANIFEST")}"
+
 mkdir -p "$ROOT"/{services,ui,platform}
 
-repos=(
-  "hm-api-gateway services"
-  "hm-auth-service services"
-  "hm-patient-service services"
-  "hm-doctor-service services"
-  "hm-appointment-service services"
-  "hm-medical-records-service services"
-  "hm-department-service services"
-  "hm-staff-service services"
-  "hm-notification-service services"
-  "customer-portal ui"
-  "admin-portal ui"
-  "terraform-infra platform"
-  "terraform-modules platform"
-)
+mapfile -t repos < <(jq -r '.repositories[] | "\(.name) \(.group)"' "$MANIFEST")
 
 for entry in "${repos[@]}"; do
   name="${entry%% *}"

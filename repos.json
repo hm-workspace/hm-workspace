@@ -1,0 +1,18 @@
+{
+  "owner": "manojkumarmeda",
+  "repositories": [
+    { "name": "hm-api-gateway", "group": "services" },
+    { "name": "hm-auth-service", "group": "services" },
+    { "name": "hm-patient-service", "group": "services" },
+    { "name": "hm-doctor-service", "group": "services" },
+    { "name": "hm-appointment-service", "group": "services" },
+    { "name": "hm-medical-records-service", "group": "services" },
+    { "name": "hm-department-service", "group": "services" },
+    { "name": "hm-staff-service", "group": "services" },
+    { "name": "hm-notification-service", "group": "services" },
+    { "name": "customer-portal", "group": "ui" },
+    { "name": "admin-portal", "group": "ui" },
+    { "name": "terraform-infra", "group": "platform" },
+    { "name": "terraform-modules", "group": "platform" }
+  ]
+}
