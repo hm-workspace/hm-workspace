@@ -1,0 +1,10 @@
+# Keep this workspace repo lightweight; individual codebases are separate repositories.
+services/
+ui/
+platform/
+
+# Local artifacts
+.env
+*.log
+.DS_Store
+Thumbs.db
