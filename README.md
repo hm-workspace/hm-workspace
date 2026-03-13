@@ -33,29 +33,29 @@ hm-workspace/
 
 ## GitHub Repositories
 
-Owner: `manojkumarmeda`
+Owner: `hm-workspace`
 
 ### Services
 
-- `https://github.com/manojkumarmeda/hm-api-gateway`
-- `https://github.com/manojkumarmeda/hm-auth-service`
-- `https://github.com/manojkumarmeda/hm-patient-service`
-- `https://github.com/manojkumarmeda/hm-doctor-service`
-- `https://github.com/manojkumarmeda/hm-appointment-service`
-- `https://github.com/manojkumarmeda/hm-medical-records-service`
-- `https://github.com/manojkumarmeda/hm-department-service`
-- `https://github.com/manojkumarmeda/hm-staff-service`
-- `https://github.com/manojkumarmeda/hm-notification-service`
+- `https://github.com/hm-workspace/hm-api-gateway`
+- `https://github.com/hm-workspace/hm-auth-service`
+- `https://github.com/hm-workspace/hm-patient-service`
+- `https://github.com/hm-workspace/hm-doctor-service`
+- `https://github.com/hm-workspace/hm-appointment-service`
+- `https://github.com/hm-workspace/hm-medical-records-service`
+- `https://github.com/hm-workspace/hm-department-service`
+- `https://github.com/hm-workspace/hm-staff-service`
+- `https://github.com/hm-workspace/hm-notification-service`
 
 ### UI
 
-- `https://github.com/manojkumarmeda/customer-portal`
-- `https://github.com/manojkumarmeda/admin-portal`
+- `https://github.com/hm-workspace/customer-portal`
+- `https://github.com/hm-workspace/admin-portal`
 
 ### Platform
 
-- `https://github.com/manojkumarmeda/terraform-infra`
-- `https://github.com/manojkumarmeda/terraform-modules`
+- `https://github.com/hm-workspace/terraform-infra`
+- `https://github.com/hm-workspace/terraform-modules`
 
 ## Quick Start
 
@@ -69,7 +69,7 @@ cd hm-workspace/scripts
 ```
 
 Defaults:
-- `GITHUB_OWNER=manojkumarmeda`
+- `GITHUB_OWNER=hm-workspace`
 - `GIT_PROTOCOL=https`
 - `REPOS_MANIFEST=../repos.json`
 
@@ -78,7 +78,7 @@ Defaults:
 Optional overrides:
 
 ```bash
-GITHUB_OWNER=manojkumarmeda GIT_PROTOCOL=ssh ./clone-all.sh "$HOME/hm-workspace"
+GITHUB_OWNER=hm-workspace GIT_PROTOCOL=ssh ./clone-all.sh "$HOME/hm-workspace"
 ```
 
 ### Build all service repos

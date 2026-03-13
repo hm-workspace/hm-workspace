@@ -1,5 +1,5 @@
 {
-  "owner": "manojkumarmeda",
+  "owner": "hm-workspace",
   "repositories": [
     { "name": "hm-api-gateway", "group": "services" },
     { "name": "hm-auth-service", "group": "services" },
