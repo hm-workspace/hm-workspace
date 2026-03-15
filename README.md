@@ -67,6 +67,7 @@ cd hm-workspace/scripts
 ```
 
 Defaults:
+
 - `GITHUB_OWNER=hm-workspace`
 - `GIT_PROTOCOL=https`
 - `REPOS_MANIFEST=../repos.json`
