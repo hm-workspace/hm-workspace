@@ -80,6 +80,8 @@ run_folder /db/Database master
 run_folder /db/User healthplus
 run_folder /db/Table healthplus
 run_folder /db/View healthplus
+# Prefer canonical plural folder; keep singular for backward compatibility.
+run_folder /db/StoredProcedures healthplus
 run_folder /db/StoredProcedure healthplus
 run_folder /db/Index healthplus
 run_folder /db/Constraint healthplus
